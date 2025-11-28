@@ -88,7 +88,7 @@ resource "aws_launch_template" "catalogue" {
     vpc_security_group_ids = [local.catalogue_sg_id]
 
     # tags attached to the instance
-    tag_specification {
+    tag_specifications {
         resource_type = "instance"
 
         tags = merge(
@@ -100,7 +100,7 @@ resource "aws_launch_template" "catalogue" {
     }
 
     # tags attached to the volume created by instance
-    tag_specification {
+    tag_specifications {
         resource_type = "volume"
 
         tags = merge(
