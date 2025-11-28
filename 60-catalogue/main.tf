@@ -92,7 +92,7 @@ resource "aws_launch_template" "catalogue" {
         resource_type = "instance"
 
         tags = merge(
-            local.common_tags
+            local.common_tags,
             {
                 Name = "${local.common_name_suffix}-catalogue"
             }
@@ -104,7 +104,7 @@ resource "aws_launch_template" "catalogue" {
         resource_type = "volume"
 
         tags = merge(
-            local.common_tags
+            local.common_tags,
             {
                 Name = "${local.common_name_suffix}-catalogue"
             }
